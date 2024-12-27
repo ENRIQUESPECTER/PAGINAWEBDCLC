@@ -1,0 +1,56 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization;
+@inject IViewLocalizer verRecurso;
+
+
+   @model List<ContactoModel>
+@{
+    ViewData["Title"] = "Listar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<header class="masthead" id="masthead">
+    <div class="container-fluid px-4 px-lg-5 d-flex h-100 align-items-center">
+    <div class="card-header text-white">
+        Lista de Contactos
+    </div>
+    <div class="card-body">
+        <a asp-action="Guardar" asp-controller="Mantenedor" class="btn btn-success">Crear Nuevo<i class="bi bi-plus-circle"></i></a>
+        <!--Salto de parrafo-->
+        <hr />
+        <!--Tabla donde se muestran los registros de la BD-->
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Telefono</th>
+                    <th>Correo</th>
+                    <th>Direccion</th>
+                    <th>FechaCreacion</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--Recorre la Lista de ContactoModel-->
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="text-white">@item.Nombre</td>
+                        <td class="text-white">@item.Telefono</td>
+                        <td class="text-white">@item.Correo</td>
+                        <td class="text-white">@item.Direccion</td>
+                        <td class="text-white">@item.FechaCreacion</td>
+                        <td>
+                            <a asp-action="Editar" asp-controller="Mantenedor" class="btn btn-primary btn-sm" asp-route-IdContacto="@item.IdContacto">Editar<i class="bi bi-pen"></i></a>
+                        </td>
+                        <td>
+                            <a asp-action="Eliminar" asp-controller="Mantenedor" class="btn btn-danger btn-sm" asp-route-IdContacto="@item.IdContacto">Eliminar<i class="bi bi-trash3"></i></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+       </div>
+
+</div>
+</header>
+ 

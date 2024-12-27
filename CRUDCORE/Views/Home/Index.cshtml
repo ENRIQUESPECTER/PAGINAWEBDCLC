@@ -1,0 +1,56 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization;
+@inject IViewLocalizer verRecurso;
+
+@{
+    ViewData["Title"] = "Home Page :D";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!--MASTHEAD-->
+<header class="masthead" id="masthead">
+    <div class="container-fluid px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+        <div class="d-flex justify-content-center">
+            <div class="text-center">
+                <h1 class="mx-auto my-0 text-uppercase display-4">BIENVENIDO A ELECTRICSDCLC</h1>
+                <h2 class="mx-auto mb-5 mt-2">Encuentra lo que deseas en el mundo de los electronicos</h2>
+            </div>
+        </div>
+    </div>
+</header>
+<!--ABOUT-->
+<section class="about-section text-center" id="about">
+    <div class="container-fluid px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-5">
+                <h2 class="mb-4 display-5 text-white-50">Nosotros</h2>
+                <p class="text-white-50">Somos una empresa dedidcada a ofrecer servicios sobre mantenimiento de dispositivos tecnologicos, interesada en brindar un servicio de calidad que satisfaga las necesidades de nuestros clientes.</p>
+                <p class="text-white-50">Ideal para todos, tanto por los aficionados de la tecnologia, como aquellos menos familiarizados en este mundo tan maravilloso.</p>
+            </div>
+            <img class="img-fluid" src="assets/download.jpeg" alt="...">
+        </div>
+    </div>
+</section>
+<!--PROYECTOS-->
+<section class="projects-section bg-light" id="projects">
+    <div class="container px-lg-5 d-flex">
+        <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+            <div class="col-lg-7"><img class="img-fluid" src="assets/DISPOSITIVOS.png" alt="..."></div>
+            <div class="col-lg-5 col-xl-4">
+                <div class="featured-text text-center">
+                    <h5>Ofrecemos reparaciones de todo tipo de dispositivos electronicos</h5>
+                    <p>Como lo son: Dispositivos moviles(Android y IOS), Computadoras, Tabletas, Televisores y Consolas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--FOOTER-->
+<footer class="footer small text-center" id="footer">
+    <div class="container px-4 px-lg-5 text-white">
+        <a>Contactanos al siguiente Numero: 56 1761 7788</a>
+        <p>Tambien puedes contactarnos a las siguientes redes sociales:</p>
+        <a class="mx-2" href="https://x.com/?lang=es"><i class="fab fa-twitter"></i><img src="~/assets/X_logo.jpg" height="100" width="100" /></a>
+        <a class="mx-2" href="https://es-la.facebook.com/login/device-based/regular/login/"><i class="fab fa-facebook-f"></i><img src="~/assets/f_logo.png" height="100" width="100" /></a>
+        <a class="mx-2" href="https://github.com/"><i class="fab fa-github"></i><img src="~/assets/git-logo.jpg" height="100" width="100" /></a>
+    </div>
+</footer>
+
