@@ -11,13 +11,15 @@
     <div class="container-fluid px-4 px-lg-5 d-flex h-100 align-items-center">
     <div class="card-header text-white">
         Lista de Contactos
+        <hr />
+            <a asp-action="Guardar" asp-controller="Mantenedor" class="btn btn-success">Crear Nuevo<i class="bi bi-plus-circle"></i></a>
     </div>
-    <div class="card-body">
-        <a asp-action="Guardar" asp-controller="Mantenedor" class="btn btn-success">Crear Nuevo<i class="bi bi-plus-circle"></i></a>
+    <div class="card-body table-responsive">
+        
         <!--Salto de parrafo-->
         <hr />
         <!--Tabla donde se muestran los registros de la BD-->
-        <table class="table table-bordered">
+        <table class="table table-bordered" id="cliente">
             <thead>
                 <tr>
                     <th>Nombre</th>
@@ -48,9 +50,7 @@
                 }
             </tbody>
         </table>
-
        </div>
-
 </div>
 </header>
  

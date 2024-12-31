@@ -74,9 +74,21 @@
 
 html {
   scroll-padding-top: calc(4.5rem - 1px);
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  
 }
 body {
   letter-spacing: 0.0625em;
+  font-size: 18px;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 #mainNav {
   min-height: 3.5rem;
@@ -177,12 +189,16 @@ body {
       width: 100%;
       height: auto;
       min-height: 35rem;
-      padding: 15rem 0;
-      background: linear-gradient(to bottom, rgba(215, 107, 255, 0.551) 0%, rgb(81, 80, 80, 0.7) 75%, #343434 100%), url("../assets/img/bg-masthead.jpg");
+      padding: 10rem 0;
+      background: linear-gradient(to bottom, rgba(215, 107, 255, 0.551) 0%, rgb(81, 80, 80, 0.7) 75%, #343434 100%);
       background-position: center;
       background-repeat: no-repeat;
       background-attachment: scroll;
       background-size: cover;
+      
+      display: flex;
+      flex-wrap: wrap;
+      height: fit-content;
     }
     .masthead h1, .masthead .h1 {
       font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -219,19 +235,55 @@ body {
     font-size: 1.25rem;
   }
 }
+@media (max-width: 450px) {
+    .masthead {
+        width: 100%;
+        height: auto;
+    }
+        .masthead h1 {
+            font-size: 28px;
+            line-height: 2.5rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+}
+@media (max-width: 320px) {
+    .masthead {
+        width: 100%;
+        height: auto;
+
+    }
+        .masthead h1 {
+            font-size: 20px;
+            line-height: 2.5rem;
+            text-align: center;
+            
+        }
+}
+
 
   .about-section {
-    padding-top: 10rem;
+    padding-top: 10rem 0;
     background: linear-gradient(to bottom, #343434 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content; 
+    text-align: center;
+    width: 100%;
   }
   .about-section p {
     margin-bottom: 5rem;
   }
   .projects-section {
     padding: 10rem 0;
+    display: grid;
+    flex-wrap: wrap;
+    height: fit-content;  
   }
   .projects-section .featured-text {
     padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
   }
   @media (min-width: 992px) {
     .projects-section .featured-text {
@@ -242,6 +294,8 @@ body {
   .projects-section .project-text {
     padding: 3rem;
     font-size: 90%;
+    display: flex;
+      flex-wrap: wrap;
   }
   @media (min-width: 992px) {
     .projects-section .project-text {
@@ -261,6 +315,9 @@ body {
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover;
+    display: grid;
+    flex-wrap: wrap;
+    height: fit-content;
   }
   .signup-section .form-signup input {
     box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
@@ -314,13 +371,23 @@ body {
     padding: 5rem 0;
     background-color: black;
     color: black;
+    display: grid;
+  flex-wrap: wrap;
+  height: fit-content;
   }
+  .container, .container-fluid {
+    max-width: 100%;
+    padding: 0 15px;
+}
 
 
   
   img,
 svg {
   vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+  
 }
 .img-fluid {
   max-width: fit-content;
@@ -359,3 +426,109 @@ svg {
   border-top-left-radius: calc(0.25rem - 1px);
   border-top-right-radius: calc(0.25rem - 1px);
 }
+
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    
+    height: 500px;
+}
+
+@media (max-width: 575.98px) {
+    .table-responsive-sm {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .table-responsive-md {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .table-responsive-lg {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .table-responsive-xl {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+@media (max-width: 1399.98px) {
+    .table-responsive-xxl {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+@media (max-width: 400px){
+    .masthead {
+        width: 100%;
+        font-size: 24px;
+    }
+    .about-section{
+        width: 100%;
+    }
+}
+
+/*
+.home{
+    display: flex;
+    flex-wrap: wrap;
+}
+.in-flex {
+    flex: 1;
+    min-width: 250px;
+}
+.in-flex:first-child{
+    flex: 2;
+    padding: 25px;
+    margin: 20px;
+    margin-bottom: 0px;
+}
+.in-flex div{
+    padding: 25px;
+    margin: 20px;
+}
+@media screen and (max-width:400px){
+    .masthead{
+        width: 100%;
+    }
+    .about-section {
+        width: 100%;
+    }
+    .projects-section {
+        width: 100%;
+    }
+    .footer {
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
+  body {
+      font-size: 16px;
+  }
+}
+
+/* Estilo para pantallas pequeñas (móviles) 
+@media (max-width: 480px) {
+  body {
+      font-size: 14px;
+  }
+}
+.container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.item{
+  flex: 1 1 300px;
+  margin: 10px;
+}*/

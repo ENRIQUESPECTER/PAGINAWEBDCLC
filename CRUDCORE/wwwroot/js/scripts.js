@@ -47,3 +47,11 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+$(document).ready(function () {
+    $("#cliente").DataTable({
+        "scrollY": "200px",
+        "scrollCollapse": true
+        "paging": false
+    });
+});
